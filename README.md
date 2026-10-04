@@ -4,6 +4,8 @@ This project implements a UVM-based verification environment for a 16-bit-wide, 
 
 ## Design Under Test (DUT)
 
+> **Note on authorship:** the RTL in `Design/` was generated with an AI assistant (Claude) and used purely as a verification target. Everything on the verification side is my own work: the UVM environment, the scoreboard model, the assertions, the debugging described below and the mutation-testing branches. I read the RTL only to understand its interface and intended behaviour, never to design or modify it (apart from the deliberate faults on the `bug-injection/*` branches).
+
 An asynchronous FIFO with:
 
 - Independent write (`wr_clk`) and read (`rd_clk`) clock domains, with separate, per-domain active-low resets
